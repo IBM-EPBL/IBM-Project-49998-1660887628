@@ -1,0 +1,54 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    background-color: gainsboro;
+}
+
+#label{
+    display: inline-block;
+    width: 8rem;
+    margin: 15px;
+    font-weight: bolder;
+    color: black;
+
+    
+}
+input{
+    padding: 5px;
+    margin-right: 5px;
+    
+}
+
+
+textarea{
+    width: 13rem;
+}
+
+select{
+    padding: 5px;
+    font-size: 15px;
+}
+#submit{
+    margin-left: 10rem;
+    padding: 4px;
+    font-size: 15px;margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+  form{
+
+    margin-left: 30rem;
+    margin-top: 10rem;
+
+    width: fit-content;
+    border-radius: 10px;    
+  }
+  #email,#pass{
+    border-color: black;
+  }
+  textarea{
+    border-color: black;
+  }
