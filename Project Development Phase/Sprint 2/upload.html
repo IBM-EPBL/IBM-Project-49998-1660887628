@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/styles/style.css">
+        <script src="https://kit.fontawesome.com/15b6f152f1.js" crossorigin="anonymous"></script>
+        <title>NUTRITION ASSISTANT</title>
+    </head>
+    <body>
+        <ul class="nav-list">
+            <li class="nav-item"><a href="/home">Home</a></li>
+            <li class="nav-item"><a href="/foodHistory">Food History</a></li>
+            <li class="nav-item"><a href="/uploadFood" class="active">Upload</a></li>
+            <li class="nav-item-right"><a href="/profile"><i class="fa-solid fa-user"></i></a></li>
+            <li class="nav-item-right" onclick="javascript:return confirm('Are you sure you want to log out?');"><a href="/logout"><i class="fa-solid fa-right-from-bracket"></i></a></li>
+        </ul>
+        <div class="form-wrapper upload-form">
+            <form action="/upload" method="POST" class="form" enctype = "multipart/form-data">
+                <h1>UPLOAD</h1>
+                <div class="inputContainer">
+                    <input type="file" name="file" id="imgInp" onchange="previewImage()" placeholder="Upload image" required>
+                </div>
+                <img src="#" style="display: none;"alt="" width="300px" height="300px" id="preview">
+                <input type="submit" class="submitBtn" value="Upload">
+            </form>
+        </div>
+      </form>
+      <script>
+        function previewImage(){
+            imgInp = document.getElementById('imgInp')
+            img = document.getElementById('preview')
+            const [file] = imgInp.files
+            if (file) {
+                img.src = URL.createObjectURL(file)
+                img.style.display = "block"
+            }
+        }
+      </script>
+    </body>
+</html>
