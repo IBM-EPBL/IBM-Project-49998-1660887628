@@ -1,0 +1,107 @@
+:root {
+    --red: #ef233c;
+    --darkred: #c00424;
+    --platinum: #e5e5e5;
+    --black: #2b2d42;
+    --white: #fff;
+    --thumb: #edf2f4;
+  }
+  
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .container {
+    max-width: 1400px;
+    padding: 25px 15px 25px 15px;
+    margin: 0 auto;
+    height: calc(100% - 43px);
+    width: 100%;
+  }
+  
+  .food-history-bg{
+    background-image: url('4294157.jpg');
+    background-size: contain; 
+    background-repeat: no-repeat; 
+    background-position: center;
+  }
+
+  h2 {
+    font-size: 32px;
+    margin-bottom: 1em;
+  }
+  
+  .cards {
+    display: flex;
+    padding: 25px 0px;
+    list-style: none;
+    scroll-snap-type: x mandatory;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .details{
+    padding: 10px;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    max-width: 450px;
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgb(0 0 0 / 15%);
+    margin: 20px;
+  }
+  
+  .card:hover {
+    color: var(--white);
+    background: #ffc801;	
+  }
+  
+  .card .card-title {
+    font-size: 20px;
+  }
+  
+  .card .card-content {
+    margin: 20px 0;
+    max-width: 85%;
+  }
+  
+  .card .card-link-wrapper {
+    margin-top: auto;
+  }
+  
+  .card .card-link {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background: var(--red);
+    padding: 6px 12px;
+    border-radius: 8px;
+    transition: background 0.2s;
+  }
+  
+  .card:hover .card-link {
+    background: #4acc00;
+  }
+  
+  .cards::-webkit-scrollbar {
+    height: 12px;
+  }
+  
+  .cards::-webkit-scrollbar-thumb,
+  .cards::-webkit-scrollbar-track {
+    border-radius: 92px;
+  }
+  
+  .cards::-webkit-scrollbar-thumb {
+    background: var(--darkred);
+  }
+  
+  .cards::-webkit-scrollbar-track {
+    background: var(--thumb);
+  }

@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/styles/cardStyle.css">
+        <script src="https://kit.fontawesome.com/15b6f152f1.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="/styles/style.css">
+        <title>NUTRITION ASSISTANT</title>
+    </head>
+    <body>
+        <ul class="nav-list">
+            <li class="nav-item"><a href="/home">Home</a></li>
+            <li class="nav-item"><a href="/foodHistory">Food History</a></li>
+            <li class="nav-item"><a href="/uploadFood">Upload</a></li>
+            <li class="nav-item-right"><a href="/profile" class="active"><i class="fa-solid fa-user"></i></a></li>
+            <li class="nav-item-right" onclick="javascript:return confirm('Are you sure you want to log out?');"><a href="/logout"><i class="fa-solid fa-right-from-bracket"></i></a></li>
+        </ul>
+        <div class="container">
+            <h2>User Profile</h2>
+            <div class="card">
+                <h3 class="card-title">WELCOME {{data['FIRST_NAME']}}! <br>Here is your profile details!</h3>
+                <div class="card-content">
+                    <p>First name: {{data['FIRST_NAME']}}</p>
+                    <p>Last name: {{data['LAST_NAME']}}</p>
+                    <p>Username: {{data['USERNAME']}}</p>
+                    <p>Contact:  {{data['PHONE_NUMBER']}}</p>
+                    <p>Email ID: {{data['EMAIL_ID']}}</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
