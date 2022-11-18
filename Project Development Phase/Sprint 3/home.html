@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/styles/style.css">
+        <script src="https://kit.fontawesome.com/15b6f152f1.js" crossorigin="anonymous"></script>
+        <title>NUTRITION ASSISTANT</title>
+    </head>
+    <body>
+        <ul class="nav-list">
+            <li class="nav-item"><a class="active" href="/home">Home</a></li>
+            <li class="nav-item"><a href="/foodHistory">Food History</a></li>
+            <li class="nav-item"><a href="/uploadFood">Upload</a></li>
+            <li class="nav-item-right"><a href="/profile"><i class="fa-solid fa-user"></i></a></li>
+            <li class="nav-item-right" onclick="javascript:return confirm('Are you sure you want to log out?');"><a href="/logout"><i class="fa-solid fa-right-from-bracket"></i></a></li>
+        </ul>
+        <h1 style="text-align: center;">Welcome,</h1>
+        <h1 style="text-align: center;">Your today's calorie intake is: {{data}} calories</h1>
+        <img src="/styles/pexels-ella-olsson-1640777.jpg" class="home-page-image">
+    <script>
+        window.watsonAssistantChatOptions = {
+            integrationID: "c7403ddb-f48a-4a58-94a2-27346df3efb3", // The ID of this integration.
+            region: "jp-tok", // The region your integration is hosted in.
+            serviceInstanceID: "5ffb9075-1402-4989-9682-ed9ea33aac66", // The ID of your service instance.
+            onLoad: function(instance) { instance.render(); }
+        };
+        setTimeout(function(){
+            const t=document.createElement('script');
+            t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+            document.head.appendChild(t);
+        });
+    </script>
+    </body>
+</html>
