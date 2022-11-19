@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/styles/cardStyle.css">
+        <link rel="stylesheet" href="/styles/style.css">
+        <script src="https://kit.fontawesome.com/15b6f152f1.js" crossorigin="anonymous"></script>
+        <title>NUTRITION ASSISTANT</title>
+    </head>
+    <body>
+        <ul class="nav-list">
+            <li class="nav-item"><a class="active" href="/home">Home</a></li>
+            <li class="nav-item"><a href="/foodHistory">Food History</a></li>
+            <li class="nav-item"><a href="/uploadFood">Upload</a></li>
+            <li class="nav-item-right"><a href="/profile"><i class="fa-solid fa-user"></i></a></li>
+            <li class="nav-item-right" onclick="javascript:return confirm('Are you sure you want to log out?');"><a href="/logout"><i class="fa-solid fa-right-from-bracket"></i></a></li>
+        </ul>
+        <div class="container food-history-bg">
+            <h2>Here is the nutritional details for the food you uploaded!</h2>
+            <ul class="cards">
+                <li class="card">
+                <div>
+                    <h3 class="card-title">{{targetFoodItem}}</h3>
+                    <div class="card-content">
+                        <img src="{{image_url}}" alt="" width="300px" height="300px">
+                        {%for key, value in data['items'][0].items()%}
+                            <p class="details">{{key}} : {{value}}</p>
+                        {%endfor%}
+                        <a href="/foodHistory" style="text-decoration: none;"><input type="button" value="Go to Food History" class="submitBtn"></a>
+                    </div>
+                </div>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>
